@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Sign up page</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css" >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+  </head>
+ <body id="signin_body"> 
+    <!-- Start Header  -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="index.html" title="home page" class="logo" id="logo">Joy Store</a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="sign.html">Sign up/in</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  <!-- End Header -->
+				
+<body>
+	
+	
+   
+	
+	<div class="form">
+        <div class="content">
+          <h2> Log in </h2>
+		  <p id="new-user"> New user?<a href="sign.html" title="sign Up"> Sign up </a></p></p>
+          <form action="index.html" method="post" onsubmit="return validate()">
+
+            <input class="input" type="email" placeholder="Your e-mail" name="email" id="email"/>
+			<input class="input" type="password" name="password" placeholder="Password" id="pass" >
+		
+      <hr>
+			
+			<input id="checkbox-agree" type="checkbox" name="Agree to the terms" value="Agree to the terms" >
+		   <p id='agreement'> Remember Me</p>		
+
+       <button type="submit" value="Log in" >Log in</button>	
+			
+          </form>
+        
+      </div>
+    </div>
+<script type="text/javascript">
+  function validate()
+          {
+
+               var email = document.getElementById('email');
+               var password = document.getElementById('pass');
+
+               if (email.value =="")
+               {
+                    email.style.border="1px solid red"
+                    swal("This field is requierd");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+
+               if ( password.value=="")
+               {
+                    password.style.border="1px solid red"
+                    swal("This field is requierd");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+  
+          }
+
+</script>
+
+		
+		
+
+		
+
+	
+		  <script src="js/joyStore.js">
+        /*
+   Random Background Color
+*/
+
+// #fd34f7 FF00FF
+
+// math.random (مكتبة ماث منها اخدت فنكشن بتطلع رقم عشوائي )
+// ((طول اللست L)ضربته بعدد عناصر اللست
+// ماث. فلور بتقرب لأقرب وأقل عدد صحيح عشان العدد اللي يطلع يكون أصغر من اكبر عنصر باللست يعني م يطلع برا اللست
+let hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+// hexadicemel code  ( 0-9 + a-f )ويتكون من ستة أرقام 
+// لست فاضية عشان أجمع فيها الارقام الستة اللي حتشكل كود الهيكساديسيمل اللي حضيفلو بعد ال # وبطلع كود اللون
+let colorParts = [];
+
+
+// بتضيف الرقم كآخر انكدس  push
+
+// ولو استعملت unshift مش حتفرق
+
+// ببدا من الصفر وبقف عند الستة فحيطلعلنا ست ارقام عشوائية وحيضيفهم للست
+for (let i = 0; i < 6; i++) {
+  colorParts.push(hexArray[Math.floor(Math.random() * hexArray.length)]);
+}
+// فنكشن جوين بتجمع الارقام العشوائية اللي طلعتها فوق و بتحطهم كتسرنج واحد والباك كوتس عشان يتعرف على الكلوس اللي فيهافنكشن الجوين ويضيف السلم 
+// ضفته بمتغير فاينل كلر عشان أقدر استعمله
+let finalColor = `#${colorParts.join("")}`;
+
+// document.h2.append(finalColor);
+// document.h2.style.Color = finalColor;
+let id = document.querySelector('.form .content h2')
+document.body.append(finalColor);
+document.body.style.backgroundColor = finalColor;
+      </script>
+		
+	
+
+</body>
+
+</html>  

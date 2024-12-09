@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Sign up page</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css" >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+  </head>
+  <body id="signin_body">
+    <!-- Start Header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="index.html" title="home page" class="logo" id="logo">Joy Store</a>
+        <ul class="main-nav">
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="sign.html">Sign up/in</a></li>
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+				
+<body>
+	
+	
+   
+	
+	<div class="form">
+        <div class="content">
+          <h2> Sign up </h2>
+		  <p id="Already-have-account"> Already have an account?<a href="login.html" title="Login"> login </a>
+          <form action="index.html" method="post" onsubmit="return validate()">
+            <input class="input" type="text" placeholder="Your Full Name" name="name" id="name" />
+			<input class="input" type="text"  placeholder="Enter User Name" name="user name" id="user" >
+            <input class="input" type="email" placeholder="YourEmail@domaim.com" name="email" id="email" />
+			<input class="input" type="password" name="password" placeholder="Password" id="pass" >
+			<input class="input" type="password" name="password" placeholder="Re-type Password" id="pass2">
+			<input class="input" type="date" name="dob"placeholder="your Birthdate" id="birth" >
+            <input class="input" type="text" placeholder="Your Phone (optional)" name="mobile"/>
+			<label> Gender :</label>
+			  <input  class="radio" type="radio" name="gender" value="male" id="gender">Male
+			<input class="radio"  type="radio" name="gender" value="female" >Female
+			
+			<label> Pick Your Intrests :</label>
+			
+			<input type="checkbox" name="devices" value="devices">Devices
+			
+			<input type="checkbox" name="Gaming
+			accessories" value="All of Gaming ">All of Gaming
+			
+			<input type="checkbox" name="Accessories" value="Accessories">Accessories
+      
+      <hr>
+			
+			<input id="checkbox-agree" type="checkbox" name="Agree to the terms" value="Agree to the terms"  >
+		   <p id='agreement'> Createing an acount means you are okay with terms and conditions and praivacy policy.</p>
+        <a id="privicyTermslink" href="praivacyPolicy.html" title="praivacy Policy" > Read our terms and praivacy policy here.</a>
+			
+			
+			
+            <button type="submit" value="Log in" >Sign in</button>
+          </form>
+        
+      </div>
+    </div>
+
+	
+
+<script type="text/javascript">
+	  function validate()
+          {
+
+               var name = document.getElementById('name');
+               var user = document.getElementById('user');
+               var email = document.getElementById('email');
+               var password = document.getElementById('pass');
+               var password2 = document.getElementById('pass2');
+               var agree = document.getElementById('checkbox-agree');
+
+               if (name.value =="")
+               {
+                    name.style.border="1px solid red"
+                    swal("Enter your name");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+
+               if (user.value =="")
+               {
+                    user.style.border="1px solid red"
+                    swal("Enter your User Name");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+
+
+               if (email.value =="")
+               {
+                    email.style.border="1px solid red"
+                    swal("Email field is requierd");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+
+               if ( password.value=="")
+               {
+                    password.style.border="1px solid red"
+                    swal("password field is requierd");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+               if ( password2.value=="")
+               {
+                    password2.style.border="1px solid red"
+                    swal("you Should re_type password");
+                    return false;
+               }
+               else
+               { 
+                    true
+
+               }
+
+  
+          }
+	
+</script>
+
+
+
+
+
+</body>
+
+</html>
